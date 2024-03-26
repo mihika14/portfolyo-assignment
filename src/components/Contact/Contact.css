@@ -1,0 +1,31 @@
+.contact-footer {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: left;
+  color: wheat;
+}
+
+.contact-details {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px; 
+  display: flex;
+  align-items: center; 
+}
+
+.contact-details svg {
+  flex-shrink: 0; 
+  width: 40px; 
+  height: auto; 
+  margin-right: 10px; 
+}
+
+.contact-info {
+  font-size: 16px;
+  line-height: 1.6;
+  text-decoration: underline;
+}
+
+.contact-info p {
+  margin: 50px; 
+}

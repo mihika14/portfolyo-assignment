@@ -1,0 +1,248 @@
+.portfolio-hero {
+  display: flex;
+  align-items: center;
+  color: #fff3c7;
+}
+
+.about-hi {
+  font-family: "Montserrat", sans-serif;
+  font-size: 5rem;
+  margin-bottom: 10px;
+}
+
+.about-name {
+  font-size: 5rem;
+  font-weight: 1000;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(
+    170deg,
+    rgba(58, 56, 56, 0.623) 0%,
+    rgb(31, 31, 31) 100%
+  );
+  padding: 5px; 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent; 
+
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #fff3c7;
+}
+
+.about-title {
+  font-size: 5rem;
+  color: #fff3c7;
+  font-family: "Montserrat", sans-serif;
+}
+
+.about-exp {
+  font-size: 4rem;
+}
+
+.about-section {
+  flex: 1;
+  margin-left: 60px;
+  margin-top: 60px;
+  animation: slideInLeft 1s ease;
+}
+
+.about-subtitle {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.about-description {
+  line-height: 30px;
+  width: 90%;
+  font-size: 1.1rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px;
+}
+
+.about-quote {
+  font-style: italic;
+}
+
+.portfolio-image {
+  position: relative;
+  margin-right: 50px;
+  width: 477px;
+  height: 492px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  animation: slideInRight 1s ease;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Ensure the image remains rounded */
+}
+
+.social-buttons {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 15px #00000027;
+  padding: 15px 10px;
+  border-radius: 4em;
+  width: 29%;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px #00000027;
+  transition: 0.3s;
+}
+
+.social-button:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 6px 3px #00000027;
+}
+
+.social-buttons svg {
+  transition: 0.3s;
+  height: 20px;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.facebook svg {
+  fill: #f2f2f2;
+}
+
+.facebook:hover svg {
+  fill: #3b5998;
+}
+
+.twitter {
+  background-color: #0077b5;
+}
+
+.twitter svg {
+  width: 25px;
+  height: 25px;
+  fill: #f2f2f2;
+}
+
+.twitter:hover svg {
+  fill: #333;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.linkedin svg {
+  fill: #f2f2f2;
+}
+
+.linkedin:hover svg {
+  fill: #0077b5;
+}
+
+.instagram {
+  background-color: #c13584;
+}
+
+.instagram svg {
+  fill: #f2f2f2;
+}
+
+.instagram:hover svg {
+  fill: #c13584;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-hero {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-section {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  .portfolio-image {
+    margin-right: 0;
+    margin-top: 40px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .social-buttons {
+    width: 60%;
+    margin-left: 10px;
+  }
+
+  .social-button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hi {
+    font-size: 3rem;
+  }
+
+  .about-name {
+    font-size: 3rem;
+    color: black;
+  }
+
+  .about-title {
+    margin-top: 16px;
+    font-size: 2rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.3rem;
+    line-height: 30px;
+}
+
+  .about-description {
+    font-size: 1rem;
+    margin-left: 27px;
+    text-align: left;
+  }
+
+  .portfolio-image {
+    width: 250px;
+    height: 250px;
+  }
+}
