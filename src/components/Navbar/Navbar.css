@@ -63,6 +63,7 @@ body {
   .logoWrapper {
     display: flex;
     font-size: 25px;
+    margin-left: 10px;
 
     .stylish {
       font-weight: bold;

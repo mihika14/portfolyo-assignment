@@ -3,44 +3,31 @@ import "./Hero.css";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { AiFillHome } from "react-icons/ai";
 import { FaTwitter, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
-
-function Hero({ userData }) {
-  // to Check if userData is available and if it contains the about field
-  if (!userData || !userData.about) {
-    return null;
-  }
-
-  const { about, social_handles } = userData;
-
+import girl from "./hi.gif";
+function Hero() {
   return (
     <div className="portfolio-hero" id="about">
       <div className="about-section animate-from-left">
         <div className="about-header">
           <div className="about-hi">
-            Hi, I'm <span className="about-name">{about.name}</span>
+            Hi, I'm <span className="about-name">Mihika</span>
           </div>
-          <div className="about-title">A {about.title}</div>
+          <div className="about-title">A Full Stack Developer</div>
         </div>
-        <p className="about-subtitle">{about.subTitle}</p>
-        <p className="about-description">{about.description}</p>
-
-        <div className="social-buttons">
-          {social_handles.map((handle) => (
-            <a
-              key={handle._id}
-              href={handle.url}
-              className={`social-button ${handle.platform.toLowerCase()}`}
-            >
-              {handle.platform === "Instagram" && <FaInstagram />}
-              {handle.platform === "LinkedIn" && <FaLinkedin />}
-              {handle.platform === "Twitter" && <FaTwitter />}
-              {handle.platform === "Facebook" && <FaFacebook />}
-            </a>
-          ))}
-        </div>
+        <p className="about-subtitle">
+          I specialize in the development of web applications.
+        </p>
+        <p className="about-description">
+          As a full-stack developer, I've refined my proficiency in JavaScript
+          and the MERN stack, while actively enhancing my skill set with
+          TypeScript. With a commitment to continuous learning, I prioritize
+          attentive listening and rapid adaptation, fostering productive
+          collaborations with clients to craft scalable, user-friendly solutions
+          that address tangible challenges
+        </p>
       </div>
       <div className="portfolio-image animate-from-right">
-        <img className="about-image" src={about.avatar?.url} alt="Avatar" />
+        <img className="about-image" src={girl} alt="Avatar" />
       </div>
     </div>
   );

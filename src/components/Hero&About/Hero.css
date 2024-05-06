@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 .portfolio-hero {
   display: flex;
   align-items: center;
@@ -68,8 +70,8 @@
   width: 477px;
   height: 492px;
   overflow: hidden;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* border-radius: 50%; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
   margin-top: 20px;
   animation: slideInRight 1s ease;
 }
@@ -78,7 +80,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%; /* Ensure the image remains rounded */
+  border-radius: 50%; 
 }
 
 .social-buttons {
@@ -185,6 +187,24 @@
   }
 }
 
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 @media (max-width: 768px) {
   .portfolio-hero {
     flex-direction: column-reverse;
@@ -204,15 +224,6 @@
     height: 300px;
   }
 
-  .social-buttons {
-    width: 60%;
-    margin-left: 10px;
-  }
-
-  .social-button {
-    width: 40px;
-    height: 40px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -233,9 +244,11 @@
   .about-subtitle {
     font-size: 1.3rem;
     line-height: 30px;
+    visibility: hidden;
 }
 
   .about-description {
+    margin-top: -72px;
     font-size: 1rem;
     margin-left: 27px;
     text-align: left;

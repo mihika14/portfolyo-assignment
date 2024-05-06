@@ -21,18 +21,25 @@
 }
 
 .project-card:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
   }
 
+.project-title1{
+  font-size: 15px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #fff3c7;
+}
+
 .project-image {
-  height: 85%;
+  height: 70%;
   width: 100%;
   border-radius: 5px;
 }
 
 .project-button {
   position: relative;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 7px;
   /* border: 1px solid rgb(61, 106, 255); */
   font-size: 15px;
@@ -47,7 +54,7 @@
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   position: relative;
-  top: 10%;
+  top: 7%;
   left: 50%;
   bottom: 10%;
   transform: translate(-50%, -50%);
@@ -158,7 +165,21 @@
   margin-top: 0;
   color: black;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
+
+.project-descr{
+  font-family: "Montserrat", sans-serif;
+}
+
+.project-point{
+  font-family: "Montserrat", sans-serif;
+}
+
+.keypoint{
+  font-family: "Montserrat", sans-serif;
+}
+
 
 .project-stack {
   color: black;

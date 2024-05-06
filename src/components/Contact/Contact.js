@@ -1,71 +1,71 @@
 import React from "react";
 import "./Contact.css";
-import { CiGlobe } from "react-icons/ci";
-import { BiLogoGmail } from "react-icons/bi";
-import { FaPhoneAlt } from "react-icons/fa";
-import { FaHome } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDiscord, FaInstagram } from "react-icons/fa";
+import { CiMail } from "react-icons/ci";
+import { ImGithub } from "react-icons/im";
 
-function Contact({ userData }) {
-  // Check if userData is available
-  if (!userData || !userData.about) {
-    return null; // Render nothing if userData is unavailable
-  }
-
-  // Destructure userData to access contact information
-  const { username, email, address, phoneNumber } = userData;
-
+function Contact() {
   return (
-    <footer className="contact-footer">
-      <div className="contact-info">
-        <p className="contact-details">
-          <FaHome
-            style={{
-              fontSize: "30px",
-              color: "black",
-              marginRight: "10px",
-              backgroundColor: "white",
-              borderRadius: "50%",
-            }}
-          />{" "}
-          {userData.about.address}
-        </p>
-        <p className="contact-details">
-          <CiGlobe
-            style={{
-              fontSize: "40px",
-              color: "blue",
-              marginRight: "10px",
-              backgroundColor: "white",
-              borderRadius: "50%",
-            }}
-          />{" "}
-          {username}
-        </p>
-        <p className="contact-details">
-          <BiLogoGmail
-            style={{
-              fontSize: "40px",
-              color: "red",
-              marginRight: "10px",
-              backgroundColor: "white",
-              borderRadius: "50%",
-            }}
-          />{" "}
-          {email}
-        </p>
+    <footer className="footer" id="contact">
+      <div className="footer__container bd-container">
+        <h2 className="footer__title">Contact me here!</h2>
 
-        <p className="contact-details">
-          <FaPhoneAlt
-            style={{
-              fontSize: "40px",
-              color: "black",
-              marginRight: "10px",
-              backgroundColor: "white",
-              borderRadius: "50%",
-            }}
-          />
-          {userData.about.phoneNumber}
-        </p>
+        <div className="footer__social">
+          <div className="icon-container">
+            <a
+              href="mailto:mihikasaxena13@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CiMail className="footer__icon" style={{ color: "#ff5d5d" }} />
+            </a>
+            <div className="icon-name">Gmail</div>
+          </div>
+
+          <div className="icon-container">
+            <a
+              href="https://github.com/mihika14"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ImGithub className="footer__icon" style={{ color: "white" }} />
+            </a>
+            <div className="icon-name">Github</div>
+          </div>
+
+          <div className="icon-container">
+            <a
+              href="https://www.linkedin.com/in/mihikasaxena14/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="footer__icon" style={{ color: "#0A66C2" }} />
+            </a>
+            <div className="icon-name">Linkedin</div>
+          </div>
+
+          <div className="icon-container">
+            <a
+              href="https://www.instagram.com/_mihika14_/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="footer__icon" style={{ color: "#E4405F" }} />
+            </a>
+            <div className="icon-name">Instagram</div>
+          </div>
+
+          <div className="icon-container">
+            <a
+              href="https://discord.com/channels/@me"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaDiscord className="footer__icon" style={{ color: "#8A2BE2" }} />
+            </a>
+            <div className="icon-name">Discord</div>
+          </div>
+        </div>
       </div>
     </footer>
   );

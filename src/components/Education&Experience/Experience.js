@@ -1,47 +1,46 @@
 import React from "react";
-import "./Timeline.css"; // Import your CSS file for styling
+import "./Experience.css";
 
-export default function Education({ userData }) {
-  if (!userData || !userData.timeline) {
-    return null; // Render nothing if userData or timeline data is unavailable
-  }
+const jobdetails = [
+  {
+    date: "(August 2023- February 2024)",
+    title: "Technical Support Engineer",
+    organization: "MICROLAND",
+    body: "I excel in managing network servers and implementing troubleshooting procedures to maintain seamless operations. With a proactive approach, I swiftly address network issues by implementing effective solutions that optimize performance and enhance reliability. My ability to collaborate with cross-functional teams allows me to tackle complex technical challenges collectively, fostering an environment of innovation and continuous improvement. Through strategic planning and diligent execution, I consistently enhance system efficiency, ensuring optimal functionality and user satisfaction.",
+  },
+  {
+    date: "(September 2022 - December 2022)",
+    title: "Web Developer",
+    organization: "SIMMI FOUNDATION",
+    body: "During my three-month internship at Simmi Foundation, I had the opportunity to work with a team of developers and gain practical experience in React.js, JavaScript, HTML, and CSS. I led the creation of a crowdfunding website, managing API payloads and ensuring data accuracy. I enhanced site responsiveness for better user experience and collaborated with a developer team, gaining expertise in Git and web development practices. Our joint efforts produced a high-quality platform that met client and user expectations.",
+    link: "https://drive.google.com/drive/folders/1Cc6YIGhz8BsYNDIQ8EiSPD5CG0Nygtr8?usp=sharing",
+  },
+  
+];
 
-  const { timeline } = userData;
-
-  // Separate education items
-  const educationItems = timeline.filter((item) => !item.forEducation);
-
-  // Function to format date in YYYY-MM-DD format
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return date.toISOString().split("T")[0];
-  };
-
+const Experience = () => {
   return (
-    <div className="timeline-portfolio">
-      <div className="timeline" id="timeline">
-        <div className="section">
-          {educationItems.map((item) => (
-            <div className="entry" key={item._id}>
-              <div className="title">
-              <h2 className="company-name">{`${item.jobTitle}, ${item.company_name}`}</h2>
-                <h3 className="company-date">{`${formatDate(item.startDate)} - ${formatDate(
-                  item.endDate
-                )}`}</h3>
-               
-              </div>
-              <div className="body">
-                <p className="body-summary">{item.summary}</p>
-                <ul>
-                  {item.bulletPoints.map((point, index) => (
-                    <li key={index}>{point}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
+    <div id="experience">
+      <div class="section-header">
+        <h1>Experience</h1>
+      </div>
+      <div className="experience-certification">
+        <div className="exp">
+          <ul className="exp-timeline">
+            {jobdetails.map((jobdetail, index) => (
+              <li className="event" key={index}>
+                <h3 className="exp-title">
+                  {jobdetail.title} at {jobdetail.organization}
+                </h3>
+                <div className="exp-year">{jobdetail.date} </div>
+                <p className="exp-inst">{jobdetail.body}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Experience;

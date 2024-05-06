@@ -1,31 +1,66 @@
-.contact-footer {
-  margin-top: 20px;
-  padding: 20px;
-  text-align: left;
-  color: wheat;
+.footer {
+  background: linear-gradient(
+    170deg,
+    rgba(58, 56, 56, 0.623) 0%,
+    rgb(31, 31, 31) 100%
+  );
+  text-align: center;
+  margin-top: 150px;
 }
 
-.contact-details {
+.footer__container {
+  padding: 3rem 0;
+}
+
+.footer__title {
+  position: relative;
+  top: -51px;
+  color: #fff3c7;
   font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-  margin-bottom: 10px; 
+  font-size: 35px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.footer__social {
   display: flex;
-  align-items: center; 
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 30px;
 }
 
-.contact-details svg {
-  flex-shrink: 0; 
-  width: 40px; 
-  height: auto; 
-  margin-right: 10px; 
+.footer__icon {
+  font-size: 35px;
+  margin: 0 10px;
+  transition: color 0.3s ease, font-size 0.3s ease;
 }
 
-.contact-info {
-  font-size: 16px;
-  line-height: 1.6;
-  text-decoration: underline;
+.footer__icon:hover {
+  color: #ffcc00;
+  font-size: 45px;
 }
 
-.contact-info p {
-  margin: 50px; 
+.icon-name {
+  color: #fff3c7;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  /* .footer__title {
+    font-size: 4vw;
+  } */
+
+  .footer__icon {
+    font-size: 6vw;
+    margin: 0 2vw;
+  }
+
+  .icon-name {
+    font-size: 2vw;
+    margin-top: 0.5rem;
+  }
 }
