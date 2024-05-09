@@ -4,6 +4,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { AiFillHome } from "react-icons/ai";
 import { FaTwitter, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 import girl from "./hi.gif";
+import { MdArrowOutward } from "react-icons/md";
 function Hero() {
   return (
     <div className="portfolio-hero" id="about">
@@ -25,7 +26,16 @@ function Hero() {
           collaborations with clients to craft scalable, user-friendly solutions
           that address tangible challenges
         </p>
+        <a class='resume' href="https://drive.google.com/file/d/1jaHiHVGCaP33zwomNEo0yUURW8diaFLv/view?usp=sharing">
+        <button class="resume-button" type="button" >
+          <span class="button__text">Resume</span>
+          <span class="button__icon">
+            <MdArrowOutward />
+          </span>
+        </button>
+        </a>
       </div>
+
       <div className="portfolio-image animate-from-right">
         <img className="about-image" src={girl} alt="Avatar" />
       </div>

@@ -3,6 +3,12 @@ import "./Contact.css";
 import { FaGithub, FaLinkedin, FaDiscord, FaInstagram } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { ImGithub } from "react-icons/im";
+import gmail from './assests/gmail.jpeg'
+import slack from './assests/slack.png'
+import linkedin from './assests/linkedin.jpeg'
+import discord from './assests/docker.png'
+import insta from './assests/insta.jpeg'
+import github from './assests/github.png'
 
 function Contact() {
   return (
@@ -17,7 +23,7 @@ function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <CiMail className="footer__icon" style={{ color: "#ff5d5d" }} />
+              <img src={gmail} className="footer__icon"/>
             </a>
             <div className="icon-name">Gmail</div>
           </div>
@@ -28,7 +34,7 @@ function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <ImGithub className="footer__icon" style={{ color: "white" }} />
+                  <img src={github} className="footer__icon"/>
             </a>
             <div className="icon-name">Github</div>
           </div>
@@ -39,7 +45,7 @@ function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin className="footer__icon" style={{ color: "#0A66C2" }} />
+                <img src={linkedin} className="footer__icon"/>
             </a>
             <div className="icon-name">Linkedin</div>
           </div>
@@ -50,7 +56,7 @@ function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaInstagram className="footer__icon" style={{ color: "#E4405F" }} />
+                 <img src={insta} className="footer__icon"/>
             </a>
             <div className="icon-name">Instagram</div>
           </div>
@@ -61,11 +67,11 @@ function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaDiscord className="footer__icon" style={{ color: "#8A2BE2" }} />
+                 <img src={discord} className="footer__icon"/>
             </a>
             <div className="icon-name">Discord</div>
           </div>
-        </div>
+          </div>
       </div>
     </footer>
   );
